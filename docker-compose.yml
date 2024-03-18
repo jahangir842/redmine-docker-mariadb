@@ -12,6 +12,7 @@ services:
       REDMINE_DB_PASSWORD: pakistan
     volumes:
       - ./redmine_data:/usr/src/redmine/files
+      - ./redmine_plugins:/usr/src/redmine/plugins
     networks:
       - redmine-network
 

@@ -11,7 +11,7 @@ Steps:
 
 2.  Start the containers using Docker Compose:
     
-    `sudo docker-compose up -d
+    'sudo docker-compose up -d'
 
 3.  Access Redmine in your web browser:
 

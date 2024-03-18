@@ -6,9 +6,12 @@
 
 Steps:
 1.  Create directories for persistent data:
+    
     mkdir redmine_data redmine_plugin mysql_data
+
 2.  Start the containers using Docker Compose:
-    sudo docker-compose up -d
+    
+    `sudo` docker-compose up -d
 
 3.  Access Redmine in your web browser:
 

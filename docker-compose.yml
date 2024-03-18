@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  redmine:
+    image: redmine:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      REDMINE_DB_MYSQL: db
+      REDMINE_DB_PASSWORD: pakistan
+    volumes:
+      - ./redmine_data:/usr/src/redmine/files
+    networks:
+      - redmine-network
+
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: pakistan
+      MYSQL_DATABASE: redmine
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    networks:
+      - redmine-network
+
+networks:
+  redmine-network:

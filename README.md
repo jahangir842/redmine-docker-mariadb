@@ -6,7 +6,7 @@
 
 Steps:
 1.  Create directories for persistent data:
-    mkdir redmine_data mysql_data
+    mkdir redmine_data redmine_plugin mysql_data
 2.  Start the containers using Docker Compose:
     sudo docker-compose up -d
 
@@ -27,3 +27,14 @@ Follow the on-screen instructions to configure Redmine. When prompted for the da
 Complete the setup process, and you should have Redmine running with MySQL on Docker.
 
 Note: Make sure to replace placeholders like your_mysql_password_here and your_mysql_root_password_here with your actual passwords. Also, consider using more secure passwords in a production environment.
+
+*************************************************
+****************** Volumes **********************
+*************************************************
+
+Redmine path: 
+    /usr/src/redmine/plugins
+    /usr/src/redmine/files
+
+Redmine path: 
+    /var/lib/mysql

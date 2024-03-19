@@ -1,13 +1,13 @@
-# redmine-docker-mysql
+# redmine-docker-mariadb
 *******************************************************************
-************ Redmine docker installation with mysql ***************
+************ Redmine docker installation with mariadb *************
 *******************************************************************
 
 
 Steps:
 1.  Create directories for persistent data:
     
-    `mkdir redmine_data redmine_plugin mysql_data`
+    `mkdir redmine_data redmine_plugin mariadb_data`
 
 2.  Start the containers using Docker Compose:
     

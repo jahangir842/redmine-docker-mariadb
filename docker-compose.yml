@@ -9,6 +9,8 @@ services:
       - db
     environment:
       REDMINE_DB_MYSQL: db
+      REDMINE_DB_DATABASE: redmine
+      REDMINE_DB_USERNAME: redmine
       REDMINE_DB_PASSWORD: pakistan
     volumes:
       - ./redmine_data:/usr/src/redmine/files
@@ -17,10 +19,12 @@ services:
       - redmine-network
 
   db:
-    image: mysql:latest
+    image: mariadb:latest
     environment:
-      MYSQL_ROOT_PASSWORD: pakistan
       MYSQL_DATABASE: redmine
+      MYSQL_USER: redmine
+      MYSQL_PASSWORD: pakistan
+      MYSQL_ROOT_PASSWORD: pakistan
     volumes:
       - ./mysql_data:/var/lib/mysql
     networks:
